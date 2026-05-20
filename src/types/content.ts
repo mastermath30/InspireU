@@ -12,12 +12,15 @@ export interface Advisor {
   title?: string;
   role: string;
   imageLabel?: string;
+  image?: string;
+  imagePosition?: string;
 }
 
 export interface EventImageSpec {
   label: string;
   size?: "large" | "small";
   aspect?: "square" | "video" | "landscape" | "portrait";
+  src?: string;
 }
 
 export interface CharityEvent {

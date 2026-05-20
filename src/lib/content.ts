@@ -56,7 +56,7 @@ export const BOARD_MEMBERS: BoardMember[] = [
     image: "/board/malhar.jpeg",
   },
   {
-    name: "Niyandri",
+    name: "Niyandri Mallaiaswamy",
     school: "Skyline High School, Class of 2027",
     role: "Social Media Manager",
   },
@@ -75,12 +75,20 @@ export const BOARD_MEMBERS: BoardMember[] = [
 
 export const ADVISORS: Advisor[] = [
   { role: "Adult Advisor" },
-  { name: "Siva Sunkara", title: "Microsoft", role: "Adult Advisor" },
+  {
+    name: "Siva Sunkara",
+    title: "Microsoft",
+    role: "Adult Advisor",
+    image: "/images/advisors/siva-sunkara.png",
+    imagePosition: "top",
+  },
   { role: "Adult Advisor" },
   {
     name: "Naga Praveena Manchikalapati",
     title: "Microsoft: Software Engineer",
     role: "Adult Advisor",
+    image: "/images/advisors/naga-praveena.jpeg",
+    imagePosition: "top",
   },
 ];
 
@@ -96,14 +104,17 @@ export const CHARITY_EVENTS: CharityEvent[] = [
           "Screenshot: PayPal donation confirmation — $3,571.56 to Everett Public Schools Foundation",
         size: "large",
         aspect: "landscape",
+        src: "/images/events/everett-school/Donation Amount.jpg",
       },
       {
         label: "Photo: InspireU team presenting check at Everett Public Schools",
         aspect: "square",
+        src: "/images/events/everett-school/additional.jpeg",
       },
       {
         label: "Photo: InspireU team presenting check at Everett Public Schools",
         aspect: "square",
+        src: "/images/events/everett-school/addtional2.jpeg",
       },
     ],
   },
@@ -116,13 +127,56 @@ export const CHARITY_EVENTS: CharityEvent[] = [
       "For more images, visit the Hopes and Smile Facebook page: https://www.facebook.com/hopesandsmiles",
     ],
     images: [
-      { label: "Photo: Dandiya event group photo", aspect: "landscape" },
-      { label: "Photo: Dandiya event", aspect: "square" },
-      { label: "Photo: Dandiya event", aspect: "square" },
-      { label: "Photo: Dandiya event", aspect: "square" },
-      { label: "Photo: Dandiya event", aspect: "square" },
-      { label: "Photo: Dandiya event", aspect: "square" },
-      { label: "Photo: Dandiya event", aspect: "square" },
+      {
+        label: "Photo: Dandiya event group photo",
+        aspect: "square",
+        src: "/images/events/hopes-and-smile/group.jpeg",
+      },
+      {
+        label: "Photo: Dandiya event — everyone",
+        aspect: "square",
+        src: "/images/events/hopes-and-smile/everyone.jpeg",
+      },
+      {
+        label: "Photo: Dandiya event",
+        aspect: "square",
+        src: "/images/events/hopes-and-smile/event.jpeg",
+      },
+      {
+        label: "Photo: Dandiya event highlights",
+        aspect: "square",
+        src: "/images/events/hopes-and-smile/more_event.jpeg",
+      },
+      {
+        label: "Photo: Dandiya event candid",
+        aspect: "square",
+        src: "/images/events/hopes-and-smile/another_event.jpeg",
+      },
+      {
+        label: "Photo: Child at Hopes and Smiles event",
+        aspect: "square",
+        src: "/images/events/hopes-and-smile/kid_from_event.jpeg",
+      },
+      {
+        label: "Photo: Donation presentation",
+        aspect: "square",
+        src: "/images/events/hopes-and-smile/donation part.jpeg",
+      },
+      {
+        label: "Photo: Donation presentation",
+        aspect: "square",
+        src: "/images/events/hopes-and-smile/donation part 2.jpeg",
+      },
+      {
+        label: "Photo: Donation presentation",
+        aspect: "square",
+        src: "/images/events/hopes-and-smile/dontion part 3.jpeg",
+      },
+      {
+        label: "Hopes and Smiles logo",
+        aspect: "square",
+        src: "/images/events/hopes-and-smile/logo.jpeg",
+      },
     ],
   },
   {
@@ -131,12 +185,66 @@ export const CHARITY_EVENTS: CharityEvent[] = [
       "Sankara Nethralaya — Mani Sharma Concert 24' (Youth Partnership)",
     layout: "gallery",
     images: [
-      { label: "Photo: Mani Sharma concert performer", aspect: "landscape" },
-      { label: "Photo: Concert audience", aspect: "landscape" },
-      { label: "Photo: Mani Sharma concert", aspect: "landscape" },
-      { label: "Photo: Mani Sharma concert", aspect: "landscape" },
-      { label: "Photo: Concert backstage", aspect: "landscape" },
-      { label: "Photo: Concert stage", aspect: "landscape" },
+      {
+        label: "Photo: Mani Sharma concert",
+        aspect: "square",
+        src: "/images/events/sankara/first pic.jpeg",
+      },
+      {
+        label: "Photo: Mani Sharma concert",
+        aspect: "square",
+        src: "/images/events/sankara/second pic.jpeg",
+      },
+      {
+        label: "Photo: Mani Sharma concert",
+        aspect: "square",
+        src: "/images/events/sankara/third pic.jpeg",
+      },
+      {
+        label: "Photo: Mani Sharma concert",
+        aspect: "square",
+        src: "/images/events/sankara/fourth pic.jpeg",
+      },
+      {
+        label: "Photo: Mani Sharma concert",
+        aspect: "square",
+        src: "/images/events/sankara/fifth pic.jpeg",
+      },
+      {
+        label: "Photo: Mani Sharma concert",
+        aspect: "square",
+        src: "/images/events/sankara/sixth pic.jpeg",
+      },
+      {
+        label: "Photo: Mani Sharma concert",
+        aspect: "square",
+        src: "/images/events/sankara/seventh pic.jpeg",
+      },
+      {
+        label: "Photo: Mani Sharma concert",
+        aspect: "square",
+        src: "/images/events/sankara/8th pic.jpeg",
+      },
+      {
+        label: "Photo: Concert group",
+        aspect: "square",
+        src: "/images/events/sankara/group pic.jpeg",
+      },
+      {
+        label: "Photo: Concert group",
+        aspect: "square",
+        src: "/images/events/sankara/group pic 2.jpeg",
+      },
+      {
+        label: "Photo: Concert group",
+        aspect: "square",
+        src: "/images/events/sankara/group pic 3.jpeg",
+      },
+      {
+        label: "Photo: Community at the Mani Sharma concert",
+        aspect: "square",
+        src: "/images/events/sankara/community.jpeg",
+      },
     ],
   },
   {

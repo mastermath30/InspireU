@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { ReactNode } from "react";
 import HoverZoom from "./HoverZoom";
 import PlaceholderImage from "./PlaceholderImage";
@@ -7,6 +8,7 @@ export interface EventImage {
   label: string;
   size?: "large" | "small";
   aspect?: "square" | "video" | "landscape" | "portrait";
+  src?: string;
 }
 
 interface EventCardProps {
@@ -14,6 +16,48 @@ interface EventCardProps {
   body?: ReactNode;
   images: EventImage[];
   layout?: "split" | "gallery";
+}
+
+const aspectClass: Record<NonNullable<EventImage["aspect"]>, string> = {
+  square: "aspect-square",
+  video: "aspect-video",
+  portrait: "aspect-[3/4]",
+  landscape: "aspect-[4/3]",
+};
+
+function EventTile({
+  img,
+  defaultAspect,
+  sizes,
+}: {
+  img: EventImage;
+  defaultAspect: NonNullable<EventImage["aspect"]>;
+  sizes: string;
+}) {
+  if (!img.src) {
+    return (
+      <PlaceholderImage
+        label={img.label}
+        aspect={img.aspect ?? defaultAspect}
+      />
+    );
+  }
+
+  const aspect = img.aspect ?? defaultAspect;
+
+  return (
+    <div
+      className={`relative w-full overflow-hidden rounded-2xl bg-elevated border border-gold-subtle ${aspectClass[aspect]}`}
+    >
+      <Image
+        src={img.src}
+        alt={img.label}
+        fill
+        sizes={sizes}
+        className="object-cover"
+      />
+    </div>
+  );
 }
 
 export default function EventCard({
@@ -36,9 +80,10 @@ export default function EventCard({
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {images.map((img, i) => (
             <HoverZoom key={i}>
-              <PlaceholderImage
-                label={img.label}
-                aspect={img.aspect ?? "landscape"}
+              <EventTile
+                img={img}
+                defaultAspect="landscape"
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
               />
             </HoverZoom>
           ))}
@@ -54,9 +99,10 @@ export default function EventCard({
       <div className="flex flex-col gap-5">
         {feature && (
           <HoverZoom>
-            <PlaceholderImage
-              label={feature.label}
-              aspect={feature.aspect ?? "landscape"}
+            <EventTile
+              img={feature}
+              defaultAspect="landscape"
+              sizes="(max-width: 1024px) 100vw, 50vw"
             />
           </HoverZoom>
         )}
@@ -64,9 +110,10 @@ export default function EventCard({
           <div className="grid grid-cols-2 gap-4">
             {rest.map((img, i) => (
               <HoverZoom key={i}>
-                <PlaceholderImage
-                  label={img.label}
-                  aspect={img.aspect ?? "square"}
+                <EventTile
+                  img={img}
+                  defaultAspect="square"
+                  sizes="(max-width: 1024px) 50vw, 25vw"
                 />
               </HoverZoom>
             ))}

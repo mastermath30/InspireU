@@ -55,6 +55,8 @@ export default function OurTeamPage() {
                 name={advisor.name}
                 role={advisor.role}
                 school={advisor.title}
+                image={advisor.image}
+                imagePosition={advisor.imagePosition}
                 imageLabel={
                   advisor.imageLabel ??
                   (advisor.name ? `Photo: ${advisor.name}` : "Photo: Adult Advisor")
