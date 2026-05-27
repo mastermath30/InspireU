@@ -37,6 +37,7 @@ export const BOARD_MEMBERS: BoardMember[] = [
     name: "Arham Bhandari",
     school: "Bellevue High School, Class of 2028",
     role: "Co-President",
+    image: "/board/arham.jpeg",
   },
   {
     name: "Saanvi Tiwari",
@@ -48,6 +49,8 @@ export const BOARD_MEMBERS: BoardMember[] = [
     name: "Helan",
     school: "Tesla STEM High School, Class of 2028",
     role: "Vice President",
+    image: "/board/helan.jpeg",
+    imagePosition: "50% 32%",
   },
   {
     name: "Malhar Pawar",
