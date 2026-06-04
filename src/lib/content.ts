@@ -62,6 +62,7 @@ export const BOARD_MEMBERS: BoardMember[] = [
     name: "Niyandri Mallaiaswamy",
     school: "Skyline High School, Class of 2027",
     role: "Social Media Manager",
+    image: "/board/niyandri.jpeg",
   },
   {
     name: "Sanjana Cherukuri",
